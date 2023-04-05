@@ -1,7 +1,7 @@
 <h1>{{ title }}</h1>
-<form (ngSubmit)="getWeather(city)">
-  <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city name">
-  <button type="submit">Get Weather</button>
-</form>
-<p *ngIf="weather">{{ weather.main.temp }}°C</p>
+    <form (ngSubmit)="getWeather(city)">
+      <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city name">
+      <button type="submit">Get Weather</button>
+    </form>
+    <p *ngIf="weather">{{ weather.current.temp_c }}°C</p>
 <router-outlet></router-outlet>
