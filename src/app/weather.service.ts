@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -7,13 +7,17 @@ import { Observable } from 'rxjs';
 })
 export class WeatherService {
 
-  private apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
-  private apiKey = 'a4e2f9136dee2b9f65b3cae00a134bff'; 
+  private apiUrl = 'https://weatherapi-com.p.rapidapi.com/current.json';
+  private apiKey = 'a5994299a8msh1ec2036d273e7fap1e6a74jsncd985cfe7c03';
 
   constructor(private http: HttpClient) { }
 
   getWeather(city: string): Observable<any> {
-    const url = `${this.apiUrl}?q=${city}&appid=${this.apiKey}&units=metric`;
-    return this.http.get<any>(url);
+    const headers = new HttpHeaders({
+      'X-RapidAPI-Key': this.apiKey,
+      'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+    });
+    const params = { q: city };
+    return this.http.get<any>(this.apiUrl, { headers, params });
   }
 }
