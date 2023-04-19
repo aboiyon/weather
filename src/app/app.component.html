@@ -1,4 +1,5 @@
-<h1>{{ title }}</h1>
+<app-nav-bar></app-nav-bar>
+<h1></h1>
     <form (ngSubmit)="getWeather(city)">
       <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city name">
       <button type="submit">Get Weather</button>

@@ -7,7 +7,6 @@ import { WeatherService } from './weather.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'weather';
   city!: string;
   weather: any;
 
