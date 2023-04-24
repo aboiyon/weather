@@ -7,14 +7,5 @@ import { WeatherService } from './weather.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  city!: string;
-  weather: any;
-
-  constructor(private weatherService: WeatherService) {}
-
-  getWeather(city: string) {
-    this.weatherService.getWeather(city).subscribe(data => {
-      this.weather = data;
-    });
-  }
+  
 }
