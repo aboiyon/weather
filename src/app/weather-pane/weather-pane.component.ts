@@ -1,5 +1,5 @@
 import { Component, Renderer2 } from '@angular/core';
-import { WeatherService } from '../weather.service';
+import { WeatherService } from '../services/weather.service';
 
 @Component({
   selector: 'app-weather-pane',
@@ -11,7 +11,7 @@ export class WeatherPaneComponent {
   city!: string;
   weather: any;
   
-  constructor(private weatherService: WeatherService, private renderer: Renderer2) {}
+  constructor(private weatherService: WeatherService) {}
 
   getWeather(city: string) {
     this.weatherService.getWeather(city).subscribe(data => {
