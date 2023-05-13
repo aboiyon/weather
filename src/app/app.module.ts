@@ -10,7 +10,6 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { WeatherPaneComponent } from './weather-pane/weather-pane.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

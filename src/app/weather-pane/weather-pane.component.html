@@ -3,5 +3,26 @@
         <input type="text" [(ngModel)]="city" name="city" placeholder="Enter city name">
         <button type="submit">Get Weather</button>
     </form>
-    <p *ngIf="weather">{{ weather.current.temp_c }}°C</p>
+    <div class="pane">
+        <p *ngIf="weather">{{ weather.current.temp_c }}°C</p>
+        <p *ngIf="weather">{{ weather.current.temp_f }}°F</p>
+        <p *ngIf="weather">{{ weather.current.is_day }}</p>
+        <p *ngIf="weather">{{ weather.current.wind_mph }} mph</p>
+        <p *ngIf="weather">{{ weather.current.wind_kph }} kph</p>
+        <p *ngIf="weather">{{ weather.current.wind_degree }}°</p>
+        <p *ngIf="weather">{{ weather.current.wind_dir }}</p>
+        <p *ngIf="weather">{{ weather.current.pressure_mb }} pa/psi</p>
+        <p *ngIf="weather">{{ weather.current.pressure_in }} pa/psi</p>
+        <p *ngIf="weather">{{ weather.current.precip_mm }} mm</p>
+        <p *ngIf="weather">{{ weather.current.precip_in }} mm</p>
+        <p *ngIf="weather">{{ weather.current.humidity }} kg/m3</p>
+        <p *ngIf="weather">{{ weather.current.cloud }}</p>
+        <p *ngIf="weather">{{ weather.current.feelslike_c }}°C</p>
+        <p *ngIf="weather">{{ weather.current.feelslike_f }}°F</p>
+        <p *ngIf="weather">{{ weather.current.vis_km }}Km</p>
+        <p *ngIf="weather">{{ weather.current.vis_miles }}Miles</p>
+        <p *ngIf="weather">{{ weather.current.uv }}W/m2</p>
+        <p *ngIf="weather">{{ weather.current.gust_mph }}mph</p>
+        <p *ngIf="weather">{{ weather.current.gust_kph }}kph</p>
+    </div>
 </div>
