@@ -9,12 +9,14 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { WeatherPaneComponent } from './weather-pane/weather-pane.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
-    WeatherPaneComponent
+    WeatherPaneComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
